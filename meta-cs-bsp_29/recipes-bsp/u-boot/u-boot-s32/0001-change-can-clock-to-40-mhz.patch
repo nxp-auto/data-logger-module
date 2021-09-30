@@ -1,0 +1,34 @@
+From ec7b24ba211360d4293f511c080e09c9e2bc6e03 Mon Sep 17 00:00:00 2001
+From: Ryder Gong <ryder.gong@nxp.com>
+Date: Thu, 8 Jul 2021 10:29:15 +0800
+Subject: [PATCH] change can clock to 40 mhz
+
+---
+ arch/arm/dts/fsl-s32-gen1.dtsi | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/dts/fsl-s32-gen1.dtsi b/arch/arm/dts/fsl-s32-gen1.dtsi
+index 2e7b746523..a4aa451b9f 100644
+--- a/arch/arm/dts/fsl-s32-gen1.dtsi
++++ b/arch/arm/dts/fsl-s32-gen1.dtsi
+@@ -321,7 +321,7 @@
+ 				<&clks S32GEN1_CLK_PERIPH_PLL_PHI1>,
+ 				<&clks S32GEN1_CLK_PERIPH_PLL_PHI1>,
+ 				<&clks S32GEN1_CLK_PERIPH_PLL_PHI1>,
+-				<&clks S32GEN1_CLK_PERIPH_PLL_PHI2>,
++				<&clks S32GEN1_CLK_FXOSC>,
+ 				<&clks S32GEN1_CLK_PERIPH_PLL_PHI3>,
+ 				<&clks S32GEN1_CLK_PERIPH_PLL_PHI4>,
+ 				<&clks S32GEN1_CLK_PERIPH_PLL_PHI5>,
+@@ -346,7 +346,7 @@
+ 				<S32GEN1_XBAR_2X_FREQ>,
+ 				<40000000>,
+ 				<40000000>,
+-				<80000000>,
++				<40000000>,
+ 				<125000000>,
+ 				<100000000>,
+ 				/* If S32G274A Rev < 2, CLK_QSPI_2X maximum
+-- 
+2.25.1
+
